@@ -1,8 +1,12 @@
 import { UPDATE_CURRENT_WEATHER } from './action-types';
 
 const intialWeather = {
- temp: 0,
- country: 'country',
+ currentTemp: 0,
+ cityName: '',
+ wind: 0,
+ humidity: 0,
+ high: 0,
+ low: 0,
 };
 
 const weatherReducer = (state = intialWeather, action) => {
@@ -10,8 +14,7 @@ const weatherReducer = (state = intialWeather, action) => {
  const { type, payload } = action;
  switch (type) {
   case UPDATE_CURRENT_WEATHER:
-   state.temp = payload.temp
-   return { ...state };
+   return payload;
   default:
    return state;
  }

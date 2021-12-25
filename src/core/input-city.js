@@ -1,25 +1,14 @@
-// import axios from 'axios';
-import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useState} from 'react';
+import { useDispatch } from 'react-redux';
 import { updateWeather } from '../app/actions';
 
-function CurrentTemp(props) {
- const dispatch = useDispatch();
- const temp = useSelector((state) => state.temp);
- const country = useSelector((state) => state.country);
- const [typedCountry, setTypedCountry] = useState('');
 
+
+function InputCity(props) {
+ const [typedCountry, setTypedCountry] = useState('');
+ const dispatch = useDispatch();
  return (
   <div>
-   <h2>{country}</h2>
-   {temp}
-   <button
-    onClick={() => {
-     dispatch(updateWeather());
-    }}
-   >
-    update
-   </button>
    <input
     onChange={(e) => {
      setTypedCountry(e.target.value);
@@ -42,8 +31,8 @@ function CurrentTemp(props) {
     //  }
     // }}
     onClick={() => {
-         dispatch(updateWeather(typedCountry));
-       }}
+     dispatch(updateWeather(typedCountry));
+    }}
    >
     request
    </button>
@@ -51,4 +40,4 @@ function CurrentTemp(props) {
  );
 }
 
-export default CurrentTemp;
+export default InputCity;
