@@ -20,18 +20,16 @@ function DisplayWeather(props) {
 
  return cityName ? (
   <div>
-   <h2>{cityName}</h2>
-   <span>Temperature: {formatTemp(currentTemp)}</span>
-   <br />
-   <span>High: {formatTemp(high)}</span>
-   <br />
-   <span>Low: {formatTemp(low)}</span>
-   <br />
-   <span>Humidity: {humidity}%</span>
-   <br />
-   <span>Wind: {wind} km/h</span>
-   <br />
-   <span>Weather: {weather}</span>
+   <h2 className='city-name'>{cityName}</h2>
+
+   <div className="stat-container">
+    <span className="stat1">Temperature: {formatTemp(currentTemp)}</span>
+    <span className="stat2">High: {formatTemp(high)}</span>
+    <span className="stat3">Low: {formatTemp(low)}</span>
+    <span className="stat4">Humidity: {humidity}%</span>
+    <span className="stat5">Wind: {wind} km/h</span>
+    <span className="stat6">Weather: {weather}</span>
+   </div>
   </div>
  ) : null;
 }

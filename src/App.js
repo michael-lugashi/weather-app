@@ -4,10 +4,10 @@ import './styles/App.css';
 
 function App() {
  return (
-  <div className="App">
+  <div className="weather-app">
    <header className="App-header">Weather App</header>
-   <InputCity />
    <DisplayWeather />
+   <InputCity />
   </div>
  );
 }
