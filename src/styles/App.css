@@ -36,21 +36,23 @@
  padding: 2vw;
  width: 60vw;
  margin: auto;
- margin-top: 10vw;
+ margin-top: 5vw;
  border: 0.4vw solid green;
  font-size: 2.5vw;
 }
 
 .place-input {
  grid-area: 1 / 1 / 2 / 2;
+ font-size: 2vw;
  width: 40vw;
 }
 .place-btn {
+ font-size: 2vw;
  grid-area: 1 / 2 / 2 / 3;
 }
 .input-container {
-  height: 4vw;
-  margin-top: 4vw;
+ height: 4vw;
+ margin-top: 2vw;
  display: grid;
  grid-template-columns: repeat(2, 1fr);
  grid-template-rows: 1fr;
